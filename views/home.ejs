@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- font awesome style sheet cdn -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <!-- css style sheet -->
+    <link rel="stylesheet" href="/styles/home.css">
+</head>
+<body>
+    
+	<section class="contact-list-container">
+		
+		<header>
+			<h1>
+				<i class="fa fa-paperclip" aria-hidden="true"></i>
+				CONTACT LIST
+			</h1>
+		</header>
+
+		<div class="contacts">
+			<ul>
+
+                <% for(let i of contact_list){ %>
+                    <li>
+                        <p class="name items"><%= i.name %></p>
+                        <p class="phone items"><%= i.phone %></p>
+                        <a class="delete items" href="/delete-contact/?id=<%=i._id%>">
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                <% } %>
+
+			</ul>
+		</div>
+		<form action="/add-contact" method="POST">
+			<input type="text" name="name" required placeholder="Enter Name">
+			<input type="number" name="phone" required placeholder="Enter Contact">
+			<button type="submit">Add Contact</button>
+		</form>
+	</section>
+
+</body>
+</html>
+
+

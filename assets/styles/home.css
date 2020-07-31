@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(70, 4, 70);
+}
+
+header h1{
+    text-align: center;
+    color: honeydew;
+    font-family: sans-serif;
+    font-size: 2rem;
+}
+
+.contact-list-container{
+    background-color: grey;
+    padding: 20px 0;
+    width: 50%;
+    margin-top: 5%;
+}
+
+.contacts{
+    width: 100%;
+}
+
+.contacts ul{
+    width: 100%;
+}
+
+.contacts ul li{
+    list-style-type: none;
+    display: flex;
+    width: 100%;
+    margin: 5px 0;
+    padding: 3px 0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.contacts ul li:hover{
+    background-color: darkslategray;
+}
+.contacts ul li:hover > p{
+    color: rgb(248, 245, 240);
+}
+.contacts ul li:hover > a{
+    color: crimson;
+}
+.items{
+    width: 33%;
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: cursive;
+    color: bisque;
+}
+.delete{
+    color: darkslateblue;
+}
+
+form{
+    display: flex;  
+    justify-content: space-around;
+    margin-top: 30px;
+}
+form input, button{
+    width: 30%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+form input{
+    border: none;
+    border-bottom: rgb(14, 40, 155) solid;
+    background-color: transparent;
+    font-size: 1rem;
+    color: seashell;
+    outline: none;
+}
+form input::placeholder{
+    color: rgba(255, 250, 240, 0.527);
+}
+form button{
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+    border: solid black 2px;
+    font-family: sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+}
+form button:hover{
+    border-color: rgb(247, 243, 243);
+    color: rgb(247, 243, 243);
+}
+
+@media screen and (max-width: 950px){
+    .contact-list-container{
+        width: 70vw;
+    }
+}
+
+@media screen and (max-width: 750px){
+    .contact-list-container{
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .contact-list-container{
+        width: 90vw;
+    }
+}
